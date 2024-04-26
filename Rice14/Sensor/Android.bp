@@ -1,0 +1,23 @@
+cc_binary {     
+    name: "ISensorServer",
+    srcs: ["SensorServer.cpp", "ISensor.cpp", "com/SensorData.cpp"],
+    shared_libs: [
+        "libbase",  // android-baseライブラリをリンクする
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libbinder",
+    ],
+}
+
+cc_binary {
+    name: "ISensorClient",
+    srcs: ["SensorClient.cpp", "ISensor.cpp", "com/SensorData.cpp"],
+    shared_libs: [
+        "libbase",  // android-baseライブラリをリンクする
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libbinder",
+    ],
+}
